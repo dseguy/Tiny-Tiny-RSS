@@ -117,7 +117,7 @@
             $width = count($frame);
             for($y=0;$y<$width;$y++) {
                 for($x=0;$x<$width;$x++) {
-                    echo ord($frame[$y][$x]).',';
+                    echo ord($frame[$y][$x]),',';
                 }
             }
         }
@@ -149,7 +149,7 @@
 
             foreach($GLOBALS['qr_time_bench'] as $markerId=>$thisTime) {
                 if ($p > 0) {
-                    echo '<tr><th style="text-align:right">till '.$markerId.': </th><td>'.number_format($thisTime-$lastTime, 6).'s</td></tr>';
+                    echo '<tr><th style="text-align:right">till ',$markerId,': </th><td>',number_format($thisTime-$lastTime, 6),'s</td></tr>';
                 } else {
                     $startTime = $thisTime;
                 }
@@ -159,7 +159,7 @@
             }
             
             echo '</tbody><tfoot>
-                <tr style="border-top:2px solid black"><th style="text-align:right">TOTAL: </th><td>'.number_format($lastTime-$startTime, 6).'s</td></tr>
+                <tr style="border-top:2px solid black"><th style="text-align:right">TOTAL: </th><td>',number_format($lastTime-$startTime, 6),'s</td></tr>
             </tfoot>
             </table>';
         }

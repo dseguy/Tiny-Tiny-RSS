@@ -181,7 +181,7 @@ class Minifier
             // before we began looping
 			if(strlen($this->b) > 1)
 			{
-				echo $this->a . $this->b;
+				echo $this->a , $this->b;
 				$this->a = $this->getReal();
 				$this->b = $this->getReal();
 				continue;
@@ -347,7 +347,7 @@ class Minifier
 					if($this->options['flaggedComments'] && $thirdCommentString == '!')
 					{
 						$endPoint = ($this->index - 1) - $startIndex;
-						echo "\n" . substr($this->input, $startIndex, $endPoint) . "\n";
+						echo "\n" , substr($this->input, $startIndex, $endPoint) , "\n";
 					}
 
 				}else{
@@ -423,7 +423,7 @@ class Minifier
 	 */
 	protected function saveRegex()
 	{
-		echo $this->a . $this->b;
+		echo $this->a , $this->b;
 
 		while(($this->a = $this->getChar()) !== false)
 		{
